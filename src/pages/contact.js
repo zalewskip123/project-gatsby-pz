@@ -1,5 +1,6 @@
 import * as React from "react";
 import PageInfo from "../components/PageInfo/Pageinfo";
+import ContactPreview from "../components/ContactPreview/ContactPreview";
 
 const pageData = {
   title: 'contact',
@@ -10,6 +11,7 @@ const ContactPage = () => {
   return (
     <>
       <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
+      <ContactPreview />
     </>
   )
 }
