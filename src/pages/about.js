@@ -9,7 +9,6 @@ const pageData = {
 }
 
 const AboutPage = ({ data }) => {
-  //console.log(data)
   return (
     <>
       <PageInfo title={pageData.title} paragraph={pageData.paragraph} />

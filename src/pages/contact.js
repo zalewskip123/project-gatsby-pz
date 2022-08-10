@@ -1,9 +1,15 @@
-import * as React from "react"
+import * as React from "react";
+import PageInfo from "../components/PageInfo/Pageinfo";
+
+const pageData = {
+  title: 'contact',
+  paragraph: `While artists work from real to the abstract, architects must work from the abstract to the real.`,
+}
 
 const ContactPage = () => {
   return (
     <>
-      <p>Test</p>
+      <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
     </>
   )
 }
