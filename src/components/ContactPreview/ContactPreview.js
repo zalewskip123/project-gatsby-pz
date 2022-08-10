@@ -9,8 +9,6 @@ const P1 = styled.p`
     font-weight: bold;
 `;
 
-const DivPsw = styled.div``;
-
 const types = ["project", "cooperation", "other"];
 
 const Button = styled.button`
@@ -47,9 +45,7 @@ const ContactPreview = () => (
     <>
         <ContactMain>
             <P1>Contact reason</P1>
-            <DivPsw >
-                <ButtonList />
-            </DivPsw >
+            <ButtonList />
         </ContactMain>
     </>
 );
