@@ -24,7 +24,6 @@ const GalleryPage = ({ data }) => {
     <>
       <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
       <GalleriesColumn>
-        {console.log(galleryImages)}
         {galleryImages.map(({image}) => (
           <GalleryPreview image={image.fluid} key={IdImage++}/>
         ))}
