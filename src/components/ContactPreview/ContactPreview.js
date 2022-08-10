@@ -46,6 +46,17 @@ const ContactPreview = () => (
         <ContactMain>
             <P1>Contact reason</P1>
             <ButtonList />
+            <form>
+                <div>
+                    <p>Name</p>
+                    <input name="name" type="text" placeholder="Your Name" />
+                    <p>E-mail</p>
+                    <input name="email" type="text" placeholder="Your E-mail" />
+                </div>
+                <p>Message</p>
+                <textarea name="message" type="textarea" placeholder="Your message" />
+                <input type="submit" value="send message" />
+            </form>
         </ContactMain>
     </>
 );
