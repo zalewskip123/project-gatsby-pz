@@ -36,15 +36,15 @@ const StyledHr = styled.hr`
 `;
 
 const AboutPreview = ({ image, author, aboutContent }) => (
-    <>
-        <DivContent>
-            <StyledHr />
-            <AboutContentP>{aboutContent}</AboutContentP>
-            <Authorp>{author}</Authorp>
-            <StyledHr />
-        </DivContent>
-        <StyledImage fluid={image} />
-    </>
+  <>
+    <DivContent>
+      <StyledHr />
+        <AboutContentP>{aboutContent}</AboutContentP>
+          <Authorp>{author}</Authorp>
+          <StyledHr />
+    </DivContent>
+    <StyledImage fluid={image} />
+  </>
 );
 
 export default AboutPreview;

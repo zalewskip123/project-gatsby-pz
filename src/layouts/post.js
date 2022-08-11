@@ -50,27 +50,27 @@ query querySingleArticle($id: String!) {
 `;
 
 const PostLayout = ({ data }) => {
-    return (
-        <div>
-            <h1>{data.datoCmsArticle.title}</h1>
-            <p>{data.datoCmsArticle.author}</p>
-            <Image fixed={data.datoCmsArticle.featuredImage.fixed} />
-            <div>{data.datoCmsArticle.articleContent.map(item => {
-                const itemKey = Object.keys(item)[1];
-                //console.log(itemKey)
-                switch(itemKey) {
-                    case 'paragraphContent':
-                        return <p key={item.id}>{item.paragraphContent}</p>;
-                    case 'headingContent':
-                        return <h2 key={item.id}>{item.headingContent}</h2>;
-                    case 'imageData':
-                        return <Image key={item.id} fixed={item.imageData.fixed}/>;
-                    default:
-                        return null;
-                }
-            })}</div>
-        </div>
-    );
+  return (
+    <div>
+      <h1>{data.datoCmsArticle.title}</h1>
+      <p>{data.datoCmsArticle.author}</p>
+      <Image fixed={data.datoCmsArticle.featuredImage.fixed} />
+      <div>{data.datoCmsArticle.articleContent.map(item => {
+        const itemKey = Object.keys(item)[1];
+        //console.log(itemKey)
+        switch(itemKey) {
+          case 'paragraphContent':
+            return <p key={item.id}>{item.paragraphContent}</p>;
+          case 'headingContent':
+            return <h2 key={item.id}>{item.headingContent}</h2>;
+          case 'imageData':
+            return <Image key={item.id} fixed={item.imageData.fixed}/>;
+          default:
+            return null;
+        }
+      })}</div>
+    </div>
+  );
 };
 
 export default PostLayout;

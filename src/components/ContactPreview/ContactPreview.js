@@ -74,29 +74,29 @@ function ButtonList() {
 }
 
 const ContactPreview = () => (
-    <>
-        <ContactMain>
-            <P1>Contact reason</P1>
-            <ButtonList />
-            <FormStyle>
-                <FirstRowFormDiv>
-                    <NameEmailDiv>
-                      <p>Name</p>
-                      <input name="name" type="text" placeholder="Your Name" />
-                    </NameEmailDiv>
-                    <NameEmailDiv>
-                      <p>E-mail</p>
-                      <input name="email" type="text" placeholder="Your E-mail" />
-                    </NameEmailDiv>
-                </FirstRowFormDiv>
-                <SecondRowFormDiv>
-                  <p>Message</p>
-                  <textarea name="message" type="textarea" placeholder="Your message" />
-                </SecondRowFormDiv>
-                <Submit value="send message"/>
-            </FormStyle>
-        </ContactMain>
-    </>
+  <>
+    <ContactMain>
+      <P1>Contact reason</P1>
+      <ButtonList />
+      <FormStyle>
+        <FirstRowFormDiv>
+          <NameEmailDiv>
+            <p>Name</p>
+            <input name="name" type="text" placeholder="Your Name" />
+          </NameEmailDiv>
+          <NameEmailDiv>
+            <p>E-mail</p>
+            <input name="email" type="text" placeholder="Your E-mail" />
+          </NameEmailDiv>
+        </FirstRowFormDiv>
+        <SecondRowFormDiv>
+          <p>Message</p>
+          <textarea name="message" type="textarea" placeholder="Your message" />
+        </SecondRowFormDiv>
+        <Submit value="send message"/>
+      </FormStyle>
+    </ContactMain>
+  </>
 );
 
 export default ContactPreview;

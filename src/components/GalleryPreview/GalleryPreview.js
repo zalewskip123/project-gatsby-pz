@@ -10,7 +10,7 @@ const StyledImage = styled(Image)`
 `;
 
 const GalleryPreview = ({ image }) => (
-    <StyledImage fluid={image} />
+  <StyledImage fluid={image} />
 );
 
 export default GalleryPreview;
