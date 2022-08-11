@@ -16,16 +16,14 @@ const GalleriesColumn = styled.div`
   padding-bottom: 50px;
 `;
 
-let IdImage = 0;
-
 const GalleryPage = ({ data }) => {
-  const { datoCmsGallery: { galleryImages }} = data;
+  const { allDatoCmsGallery: { nodes }} = data;
   return (
     <>
       <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
       <GalleriesColumn>
-        {galleryImages.map(({image}) => (
-          <GalleryPreview image={image.fluid} key={IdImage++}/>
+        {nodes[0].galleryImages.map(({id, image}) => (
+          <GalleryPreview image={image.fluid} key={id}/>
         ))}
       </GalleriesColumn>
     </>
@@ -34,13 +32,15 @@ const GalleryPage = ({ data }) => {
 
 export const query = graphql`
   {
-    datoCmsGallery {
-      galleryImages {
-        image {
-          fluid(maxWidth: 500)
-          {
-            ...GatsbyDatoCmsFluid_tracedSVG
+    allDatoCmsGallery {
+      nodes {
+        galleryImages {
+          image {
+            fluid(maxWidth: 500) {
+              ...GatsbyDatoCmsFluid_tracedSVG
+            }
           }
+          id
         }
       }
     }
